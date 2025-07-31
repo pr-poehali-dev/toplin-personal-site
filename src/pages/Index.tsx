@@ -15,6 +15,9 @@ const Index = () => {
               <a href="#home" className="text-black hover:text-gray-600 transition-all duration-300 font-medium relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-black after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full">
                 Главная
               </a>
+              <a href="#catalog" className="text-black hover:text-gray-600 transition-all duration-300 font-medium relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-black after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full">
+                Каталог
+              </a>
               <a href="#about" className="text-black hover:text-gray-600 transition-all duration-300 font-medium relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-black after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full">
                 О бренде
               </a>
@@ -45,24 +48,138 @@ const Index = () => {
             </div>
             <div className="flex space-x-4">
               <Button className="bg-black text-white hover:bg-gray-800 px-8 py-3 text-sm font-medium">
-                Смотреть коллекцию
+                <a href="#catalog">Смотреть коллекцию</a>
               </Button>
               <Button variant="outline" className="border-black text-black hover:bg-black hover:text-white px-8 py-3 text-sm font-medium">
-                Узнать больше
+                <a href="#about">Узнать больше</a>
               </Button>
             </div>
           </div>
           <div className="relative">
             <div className="aspect-square bg-gray-50 rounded-sm relative overflow-hidden">
               <img 
-                src="/img/dc438803-ebe6-41d8-92fa-f01abdafb386.jpg" 
+                src="https://cdn.poehali.dev/files/d27b62ea-e6c3-4112-ae91-4462f4615cb2.jpg" 
                 alt="TOPLIN Collection 2024" 
                 className="w-full h-full object-cover"
               />
-              <div className="absolute bottom-4 left-4 text-xs text-white font-mono bg-black/50 px-2 py-1 rounded">
+              <div className="absolute bottom-4 left-4 text-xs text-white font-mono bg-black/80 px-3 py-1.5 rounded">
                 COLLECTION 2024
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Catalog Section */}
+      <section id="catalog" className="py-24">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-light text-black mb-4">
+              Коллекция
+            </h2>
+            <div className="w-16 h-0.5 bg-black mx-auto mb-6"></div>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Минималистичные футболки TopLin — воплощение чистого стиля и качества. 
+              Каждая модель создана для тех, кто ценит лаконичность и комфорт.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* TL White T-Shirt */}
+            <div className="group">
+              <div className="aspect-square bg-gray-50 rounded-sm overflow-hidden mb-4 relative">
+                <img 
+                  src="https://cdn.poehali.dev/files/d27b62ea-e6c3-4112-ae91-4462f4615cb2.jpg" 
+                  alt="TL White T-Shirt" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute top-4 right-4 bg-black/80 text-white text-xs px-2 py-1 rounded font-mono">
+                  NEW
+                </div>
+              </div>
+              <div className="space-y-2">
+                <h3 className="font-medium text-black">TL Classic</h3>
+                <p className="text-sm text-gray-600">Белая футболка с минималистичным логотипом</p>
+                <div className="flex justify-between items-center">
+                  <span className="text-lg font-medium text-black">2 990 ₽</span>
+                  <Button size="sm" className="bg-black text-white hover:bg-gray-800">
+                    <Icon name="Plus" size={16} />
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* TOPLIN White T-Shirt */}
+            <div className="group">
+              <div className="aspect-square bg-gray-50 rounded-sm overflow-hidden mb-4 relative">
+                <img 
+                  src="https://cdn.poehali.dev/files/d27b62ea-e6c3-4112-ae91-4462f4615cb2.jpg" 
+                  alt="TOPLIN White T-Shirt" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="space-y-2">
+                <h3 className="font-medium text-black">TOPLIN Bold</h3>
+                <p className="text-sm text-gray-600">Белая футболка с крупным логотипом</p>
+                <div className="flex justify-between items-center">
+                  <span className="text-lg font-medium text-black">3 290 ₽</span>
+                  <Button size="sm" className="bg-black text-white hover:bg-gray-800">
+                    <Icon name="Plus" size={16} />
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* TL Black T-Shirt */}
+            <div className="group">
+              <div className="aspect-square bg-gray-50 rounded-sm overflow-hidden mb-4 relative">
+                <img 
+                  src="https://cdn.poehali.dev/files/0daa0592-f2af-467c-b8af-9317cef258ce.jpg" 
+                  alt="TL Black T-Shirt" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute top-4 right-4 bg-white/90 text-black text-xs px-2 py-1 rounded font-mono">
+                  BESTSELLER
+                </div>
+              </div>
+              <div className="space-y-2">
+                <h3 className="font-medium text-black">TL Classic Black</h3>
+                <p className="text-sm text-gray-600">Черная футболка с белым логотипом</p>
+                <div className="flex justify-between items-center">
+                  <span className="text-lg font-medium text-black">2 990 ₽</span>
+                  <Button size="sm" className="bg-black text-white hover:bg-gray-800">
+                    <Icon name="Plus" size={16} />
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* TOPLIN Black T-Shirt */}
+            <div className="group">
+              <div className="aspect-square bg-gray-50 rounded-sm overflow-hidden mb-4 relative">
+                <img 
+                  src="https://cdn.poehali.dev/files/0daa0592-f2af-467c-b8af-9317cef258ce.jpg" 
+                  alt="TOPLIN Black T-Shirt" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="space-y-2">
+                <h3 className="font-medium text-black">TOPLIN Bold Black</h3>
+                <p className="text-sm text-gray-600">Черная футболка с крупным белым логотипом</p>
+                <div className="flex justify-between items-center">
+                  <span className="text-lg font-medium text-black">3 290 ₽</span>
+                  <Button size="sm" className="bg-black text-white hover:bg-gray-800">
+                    <Icon name="Plus" size={16} />
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <Button variant="outline" className="border-black text-black hover:bg-black hover:text-white px-8 py-3">
+              Посмотреть все модели
+            </Button>
           </div>
         </div>
       </section>
@@ -100,19 +217,31 @@ const Index = () => {
               <div className="space-y-4">
                 <div className="aspect-[3/4] bg-white rounded-sm shadow-sm overflow-hidden">
                   <img 
-                    src="/img/1a167537-0f91-4975-b61d-8e82a56530a8.jpg" 
-                    alt="TOPLIN Fashion Model" 
+                    src="https://cdn.poehali.dev/files/d27b62ea-e6c3-4112-ae91-4462f4615cb2.jpg" 
+                    alt="TOPLIN White Collection" 
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="aspect-square bg-gray-100 rounded-sm"></div>
+                <div className="aspect-square bg-gray-100 rounded-sm overflow-hidden">
+                  <img 
+                    src="https://cdn.poehali.dev/files/0daa0592-f2af-467c-b8af-9317cef258ce.jpg" 
+                    alt="TOPLIN Black Collection" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
               <div className="space-y-4 pt-8">
-                <div className="aspect-square bg-gray-200 rounded-sm"></div>
+                <div className="aspect-square bg-gray-200 rounded-sm overflow-hidden">
+                  <img 
+                    src="https://cdn.poehali.dev/files/0daa0592-f2af-467c-b8af-9317cef258ce.jpg" 
+                    alt="TOPLIN Black TL" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
                 <div className="aspect-[3/4] bg-white rounded-sm shadow-sm overflow-hidden">
                   <img 
-                    src="/img/dc438803-ebe6-41d8-92fa-f01abdafb386.jpg" 
-                    alt="TOPLIN Collection" 
+                    src="https://cdn.poehali.dev/files/d27b62ea-e6c3-4112-ae91-4462f4615cb2.jpg" 
+                    alt="TOPLIN White Bold" 
                     className="w-full h-full object-cover"
                   />
                 </div>
